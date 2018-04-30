@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+        <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+        <script src="js/main.js"></script>
+        
+        <title>LED-Steuerung</title>
+		<style>
+			body{ 
+				font-family: Arial;
+				color: #cccccc;
+				background-color: #222222;
+				padding: 1% 2%;
+			}    		
+			
+			button{
+				height: 10%;
+				width: 100%;
+				margin: 1% auto;
+				
+			}
+            input{
+                width: 100%;
+            }
+            
+            #actual_color{
+                width: 100%;
+                height: 10%;
+                margin: 0 auto;
+                border: 1px;
+                background-color: #fff;
+            }
+        </style>
+    </head>
+    <body onload="led_start();">
+		<h1>Farben auswählen!</h1>
+        
+        <p>red 
+            <input type="range" value="0" id="red" name="red" min="0" max="255" onchange="change_red();">
+        </p>
+        <p>green 
+            <input type="range" value="0" id="green" name="green" min="0" max="255" onchange="change_green();">
+        </p>
+        <p>blue 
+            <input type="range" value="0" id="blue" name="blue" min="0" max="255" onchange="change_blue()">
+        </p>
+        <div id="actual_color"></div>                  
+    </body>
