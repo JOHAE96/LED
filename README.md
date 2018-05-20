@@ -8,5 +8,5 @@ sudo apt-get install aptitude
 
 2. start the ngrok service
 ```
-./ngrok http80
+./ngrok http 80
 ```
